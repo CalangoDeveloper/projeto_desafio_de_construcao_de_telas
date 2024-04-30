@@ -170,7 +170,7 @@ class TelaCriarConta extends StatelessWidget {
               ],
             ),
           ),
-          SizedBox(height: 20),
+          SizedBox(height: 30),
           Container(
             padding: EdgeInsets.only(left: 30, right: 30),
             child: Column(
@@ -179,7 +179,8 @@ class TelaCriarConta extends StatelessWidget {
               children: [
                   Text('NAME',
                     style: TextStyle(
-                      color: Colors.blue
+                      color: Colors.blue,
+                      fontWeight: FontWeight.bold
                     ),
                   ),
                   SizedBox(height: 2),
@@ -200,7 +201,8 @@ class TelaCriarConta extends StatelessWidget {
                   ),
                   Text('EMAIL',
                     style: TextStyle(
-                      color: Colors.blue
+                      color: Colors.blue,
+                      fontWeight: FontWeight.bold
                     ),
                   ),
                   SizedBox(height: 2),
@@ -221,7 +223,8 @@ class TelaCriarConta extends StatelessWidget {
                   ),
                   Text('PASSWORD',
                     style: TextStyle(
-                      color: Colors.blue
+                      color: Colors.blue,
+                      fontWeight: FontWeight.bold
                     ),
                   ),
                   SizedBox(height: 2),
@@ -242,7 +245,8 @@ class TelaCriarConta extends StatelessWidget {
                   ),
                   Text('DATE OF BIRTH',
                     style: TextStyle(
-                      color: Colors.blue
+                      color: Colors.blue,
+                      fontWeight: FontWeight.bold
                     ),
                   ),
                   SizedBox(height: 2),
@@ -267,7 +271,7 @@ class TelaCriarConta extends StatelessWidget {
           ),
           
           Container(
-            margin: EdgeInsets.only(top: 70),
+            margin: EdgeInsets.only(top: 60),
             decoration: BoxDecoration(
               color: Color.fromARGB(255, 231, 235, 4),
               borderRadius: BorderRadius.only(
