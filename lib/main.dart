@@ -292,10 +292,10 @@ class TelaCriarConta extends StatelessWidget {
                     ),
                   ),
                   onPressed: () {
-                    Navigator.pushNamed(context, '/terceira');
+                    Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => const TelaSenha()),);
                   },
-                  child: Text(
-                    'SING UP',
+                  child: Text('SING UP',
                     style: TextStyle(
                       fontSize: 20,
                       color: const Color.fromARGB(255, 237, 238, 238),
@@ -308,6 +308,117 @@ class TelaCriarConta extends StatelessWidget {
           ),
         ],
       ),
+    );
+  }
+}
+
+class TelaSenha extends StatelessWidget {
+  const TelaSenha({super.key});
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: const Color.fromARGB(255, 241, 238, 238),
+      body: Column(
+        children: [
+          Container(
+            height: 300,
+            color: Colors.blue,
+            padding: EdgeInsets.only(top: 40, left: 42),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text('Forgot Password',
+                  style: TextStyle(
+                     color: Colors.white,
+                    fontSize: 50,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Text('New Password',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 16,
+                  ),
+                ),
+              ],
+            ),
+          ),
+
+          Container(
+            child: Image.asset('assets/lock.jpeg')
+          ),
+          SizedBox(height: 40),
+
+          Container(
+            padding: EdgeInsets.all(40),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text('Enter your email, phone, or username and well send you a link to change a new password',
+                  style: TextStyle(
+                    color: Colors.blue,
+                    fontWeight: FontWeight.bold
+                  ),
+                ),
+
+                Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 10.0),
+                    child: TextField(
+                      keyboardType: TextInputType.emailAddress,
+                      decoration: InputDecoration(
+                        labelText: 'hello@reallygreatsite.com',
+                        fillColor: Colors.white,
+                        filled: true,
+                        border: UnderlineInputBorder(
+                          borderSide: BorderSide.none,
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                      ),
+                    ),
+                  ),
+              ],
+            ),
+          ),
+
+          Container(
+            alignment: Alignment.bottomCenter,
+            decoration: BoxDecoration(
+              color: Color.fromARGB(255, 231, 235, 4),
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(20.0),
+                topRight: Radius.circular(20.0),
+              ),
+            ),
+            height: 130,
+            child: Center(
+              child: SizedBox(
+                width: 280,
+                height: 50,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Color.fromARGB(255, 12, 60, 216),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8.0),
+                    ),
+                  ),
+                  onPressed: () {
+
+                  },
+                  child: Text('SEND',
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: const Color.fromARGB(255, 237, 238, 238),
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ]
+      )
     );
   }
 }
