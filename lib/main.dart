@@ -346,7 +346,7 @@ class TelaSenha extends StatelessWidget {
           ),
 
           Container(
-            child: Image.asset('assets/lock.jpeg')
+            child: Image.asset('assets/cadeado.jpeg')
           ),
           SizedBox(height: 40),
 
@@ -384,6 +384,7 @@ class TelaSenha extends StatelessWidget {
 
           Container(
             alignment: Alignment.bottomCenter,
+            margin: EdgeInsets.only(top: 200),
             decoration: BoxDecoration(
               color: Color.fromARGB(255, 231, 235, 4),
               borderRadius: BorderRadius.only(
