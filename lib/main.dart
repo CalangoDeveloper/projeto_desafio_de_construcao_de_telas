@@ -49,23 +49,53 @@ class TelaLogin extends StatelessWidget{
             ),
 
             Container(
-              padding: EdgeInsets.all(40),
+              padding: EdgeInsets.all(30),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text('NAME',
-                  style: TextStyle(
-                    color: Colors.white
-                  ),),
-                  SizedBox(height: 8),
-                  widgetTextFieldName(),
-                  SizedBox(height: 20),
+                    style: TextStyle(
+                      color: Colors.white
+                    ),
+                  ),
+                  SizedBox(height: 2),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 10.0),
+                    child: TextField(
+                      keyboardType: TextInputType.emailAddress,
+                      decoration: InputDecoration(
+                        labelText: 'Francois Mercer',
+                        fillColor: Colors.white,
+                        filled: true,
+                        border: UnderlineInputBorder(
+                          borderSide: BorderSide.none,
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 8,),
                   Text('PASSWORD',
-                  style: TextStyle(
-                    color: Colors.white
-                  ),),
-                  SizedBox(height: 8),
-                  widgetTextFieldPassword(),
+                    style: TextStyle(
+                      color: Colors.white
+                    ),
+                  ),
+                  SizedBox(height: 2),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 10.0),
+                    child: TextField(
+                      keyboardType: TextInputType.emailAddress,
+                      decoration: InputDecoration(
+                        labelText: '***********',
+                        fillColor: Colors.white,
+                        filled: true,
+                        border: UnderlineInputBorder(
+                          borderSide: BorderSide.none,
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -105,43 +135,175 @@ class TelaLogin extends StatelessWidget{
   }
 }
 
-widgetTextFieldName(){
-  return TextField(
-    decoration: InputDecoration(
-      border: UnderlineInputBorder(
-        borderRadius: BorderRadius.circular(15),
-      ),
-      filled: true,
-      fillColor: Colors.white,
-      hintText: 'Francois Mercer',
-      hintStyle: TextStyle(
-        color: Colors.black
-      )
-    ),
-  );
-}
-widgetTextFieldPassword(){
-  return TextField(
-    decoration: InputDecoration(
-      border: UnderlineInputBorder(
-        borderRadius: BorderRadius.circular(15),
-      ),
-      filled: true,
-      fillColor: Colors.white,
-      hintText: '***********',
-      hintStyle: TextStyle(
-        color: Colors.black
-      )
-    ),
-  );
-}
-
 class TelaCriarConta extends StatelessWidget {
   const TelaCriarConta({super.key});
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return Scaffold(
-
+      backgroundColor: const Color.fromARGB(255, 241, 238, 238),
+      body: Column(
+        children: [
+          Container(
+            height: 300,
+            color: Colors.blue,
+            padding: EdgeInsets.only(top: 80, left: 42),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'Create new account',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 50,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                SizedBox(height: 10),
+                Text(
+                  'Already Registered? Log in here.',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 16,
+                  ),
+                ),
+              ],
+            ),
+          ),
+          SizedBox(height: 20),
+          Container(
+            padding: EdgeInsets.only(left: 30, right: 30),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                  Text('NAME',
+                    style: TextStyle(
+                      color: Colors.blue
+                    ),
+                  ),
+                  SizedBox(height: 2),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 10.0),
+                    child: TextField(
+                      keyboardType: TextInputType.emailAddress,
+                      decoration: InputDecoration(
+                        labelText: 'Name',
+                        fillColor: Colors.white,
+                        filled: true,
+                        border: UnderlineInputBorder(
+                          borderSide: BorderSide.none,
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Text('EMAIL',
+                    style: TextStyle(
+                      color: Colors.blue
+                    ),
+                  ),
+                  SizedBox(height: 2),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 10.0),
+                    child: TextField(
+                      keyboardType: TextInputType.visiblePassword,
+                      decoration: InputDecoration(
+                        labelText: 'Password',
+                        fillColor: Colors.white,
+                        filled: true,
+                        border: UnderlineInputBorder(
+                          borderSide: BorderSide.none,
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Text('PASSWORD',
+                    style: TextStyle(
+                      color: Colors.blue
+                    ),
+                  ),
+                  SizedBox(height: 2),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 10.0),
+                    child: TextField(
+                      keyboardType: TextInputType.emailAddress,
+                      decoration: InputDecoration(
+                        labelText: 'Email',
+                        fillColor: Colors.white,
+                        filled: true,
+                        border: UnderlineInputBorder(
+                          borderSide: BorderSide.none,
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                      ),
+                    ),
+                  ),
+                  Text('DATE OF BIRTH',
+                    style: TextStyle(
+                      color: Colors.blue
+                    ),
+                  ),
+                  SizedBox(height: 2),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 10.0),
+                    child: TextField(
+                      keyboardType: TextInputType.datetime,
+                      decoration: InputDecoration(
+                        labelText: 'Date of Birth',
+                        hintText: 'DD/MM/YYYY',
+                        fillColor: Colors.white,
+                        filled: true,
+                        border: UnderlineInputBorder(
+                          borderSide: BorderSide.none,
+                          borderRadius: BorderRadius.circular(15),
+                        ),
+                      ),
+                    ),
+                  ),
+              ],
+            ),
+          ),
+          
+          Container(
+            margin: EdgeInsets.only(top: 70),
+            decoration: BoxDecoration(
+              color: Color.fromARGB(255, 231, 235, 4),
+              borderRadius: BorderRadius.only(
+                topLeft: Radius.circular(20.0),
+                topRight: Radius.circular(20.0),
+              ),
+            ),
+            height: 130,
+            child: Center(
+              child: SizedBox(
+                width: 280,
+                height: 50,
+                child: ElevatedButton(
+                  style: ElevatedButton.styleFrom(
+                    backgroundColor: Color.fromARGB(255, 12, 60, 216),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(8.0),
+                    ),
+                  ),
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/terceira');
+                  },
+                  child: Text(
+                    'SING UP',
+                    style: TextStyle(
+                      fontSize: 20,
+                      color: const Color.fromARGB(255, 237, 238, 238),
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
